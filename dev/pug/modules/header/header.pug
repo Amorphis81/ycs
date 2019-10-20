@@ -1,3 +1,19 @@
 header.header
-  .header-top
-  .header-main
+  .container
+    a.logo.header__logo(href="#")
+      img(src="static/images/general/logo.png", alt="logo")
+    include ../menu/header-menu
+    .header-social
+      a(href="#").header-social__icon
+        +icon('phone', 'header-social__icon-phone')
+      a(href="#").header-social__icon
+        +icon('instagram', 'header-social__icon-instagram')
+      a(href="#").header-social__icon
+        +icon('whatsapp', 'header-social__icon-whatsapp')
+      a(href="#").header-social__icon
+        +icon('facebook', 'header-social__icon-facebook')
+      a(href="#").header-social__icon
+        +icon('telegram', 'header-social__icon-telegram')
+    // .header-social
+
+  // .container
