@@ -5,3 +5,11 @@
 .display-flex { display: flex; }
 
 .right-0 { right: 0; }
+
+.block-center {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
