@@ -6,15 +6,13 @@ $(document).ready(function () {
     });
 
     $('.header-menu__item').on('click', function(e){
+        e.preventDefault();
         var items = $('.header-menu__item');
-        var currentItem = $(this);
         for (var i = 0; i < items.length; i++){
-            if ( items[i] != currentItem ) {
-                console.log(items[i]);
-                // items[i].removeClass('active');
+            if ( items[i] != $(this)[0] ) {
+                items[i].classList.remove('active');
             }
         }
-        // $('.header-menu__item').removeClass('active');
         $(this).toggleClass('active');
     })
 });
