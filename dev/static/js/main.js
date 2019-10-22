@@ -15,4 +15,6 @@ $(document).ready(function () {
         }
         $(this).toggleClass('active');
     })
+
+    $('a[data-rel^=lightcase]').lightcase();
 });

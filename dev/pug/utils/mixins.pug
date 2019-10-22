@@ -5,3 +5,7 @@ mixin icon(name,mod)
 	else
 		svg(class="svg-sprite-icon icon-" + name)
 			use(xlink:href="static/images/svg/symbol/sprite.svg#" + name)
+
+mixin persona(img)
+	a(href="static/images/content/persona/persona-1.png", data-rel="lightcase:myCollection")
+		img(src="static/images/content/persona/thumb/" + img, alt="")

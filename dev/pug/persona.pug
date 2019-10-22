@@ -1,0 +1,44 @@
+extends template/inside
+
+block variables
+	- var title = 'Имиджи'
+	- var pageClass = 'persona-page'
+
+block content
+	.container
+		.breadcrumbs
+			a(href="#").breadcrumbs__item Главная
+			span /
+			a(href="#").breadcrumbs__item-current Имиджи
+	section.s-persona
+		.container-small
+			h2.h2.persona__title Имиджи
+			.persona__date Сентябрь 30, 2019г
+			.persona-gallery
+				+persona('persona-1.png')
+				+persona('persona-2.png')
+				+persona('persona-3.png')
+				+persona('persona-4.png')
+				+persona('persona-5.png')
+				+persona('persona-6.png')
+				+persona('persona-7.png')
+				+persona('persona-8.png')
+				+persona('persona-9.png')
+				+persona('persona-10.png')
+				+persona('persona-11.png')
+				+persona('persona-12.png')
+				+persona('persona-13.png')
+				+persona('persona-14.png')
+				+persona('persona-15.png')
+				+persona('persona-16.png')
+				+persona('persona-17.png')
+				+persona('persona-18.png')
+				+persona('persona-19.png')
+				+persona('persona-20.png')
+				+persona('persona-21.png')
+				+persona('persona-22.png')
+				+persona('persona-23.png')
+				+persona('persona-24.png')
+
+	//- .container-small
+
