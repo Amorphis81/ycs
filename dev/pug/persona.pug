@@ -5,13 +5,13 @@ block variables
 	- var pageClass = 'persona-page'
 
 block content
-	.container
-		.breadcrumbs
-			a(href="#").breadcrumbs__item Главная
-			span /
-			a(href="#").breadcrumbs__item-current Имиджи
 	section.s-persona
-		.container-small
+		.container
+			.breadcrumbs
+				a(href="#").breadcrumbs__item Главная
+				span /
+				a(href="#").breadcrumbs__item.active Имиджи
+		.container.container-small
 			h2.h2.persona__title Имиджи
 			.persona__date Сентябрь 30, 2019г
 			.persona-gallery
@@ -39,6 +39,4 @@ block content
 				+persona('persona-22.png')
 				+persona('persona-23.png')
 				+persona('persona-24.png')
-
-	//- .container-small
-
+		//- .container-small

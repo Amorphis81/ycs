@@ -7,5 +7,6 @@ mixin icon(name,mod)
 			use(xlink:href="static/images/svg/symbol/sprite.svg#" + name)
 
 mixin persona(img)
-	a(href="static/images/content/persona/persona-1.png", data-rel="lightcase:myCollection")
+	a(href="static/images/content/persona/persona-1.png", data-rel="lightcase:myCollection").persona__img
 		img(src="static/images/content/persona/thumb/" + img, alt="")
+	//- .persona__img

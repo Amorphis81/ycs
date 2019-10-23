@@ -58,6 +58,7 @@ body {
   max-width: $content-size;
   padding: 0 5px;
   width: 100%;
+  &-small { max-width: 940px; }
 }
 
 menu { 
