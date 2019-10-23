@@ -18,6 +18,7 @@ $(document).ready(function () {
 
     $('a[data-rel^=lightcase]').lightcase({
         "maxWidth": 414,
-        "maxHeight": 621
+        "maxHeight": 621,
+        swipe: true
     });
 });
