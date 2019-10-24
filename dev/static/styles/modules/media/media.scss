@@ -78,7 +78,16 @@
 @media screen and (max-width: 560px){
   .breadcrumbs { display: none; }
 
-  .header { padding-top: 48px; }
+  .header { 
+    padding-top: 8px;
+    padding-bottom: 30px;
+  }
+
+  .sandwich-menu {
+    top: 68px;
+    height: calc(100% - 68px);
+    &-wrapper{ height: 100%; }
+  }
 
   .persona__title { margin-bottom: 26px; }
 
