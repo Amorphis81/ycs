@@ -21,4 +21,10 @@ $breakpoints: (
 $content-size: 1240px;
 
 // Fonts
-$main-font: 'GothamPro', sans-serif
+$main-font: 'GothamPro', sans-serif;
+
+// Parallax
+$parallax-offset: 30vh;
+$content-offset: 40vh;
+$transition-speed: 1.2s;
+$slide-number: 3;
