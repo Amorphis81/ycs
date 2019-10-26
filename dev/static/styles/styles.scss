@@ -38,6 +38,14 @@ input,
 select,
 button { outline: none; }
 
+select {
+  appearance:none;
+  cursor: pointer;
+  ::-ms-expand {
+    display: none;
+ }
+}
+
 body {
   font-family: $main-font;
   color: $accent;

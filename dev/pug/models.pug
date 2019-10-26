@@ -1,0 +1,32 @@
+extends template/inside
+
+block variables
+	- var title = 'Модели'
+	- var pageClass = 'models-page'
+
+block content
+	section.s-top
+		.container
+			+breadcrumb
+	section.s-models
+		.container.container-small
+			h2.h2.models__title Модели
+			a(href="#").models-form__dropdown
+				.dropdown__title Поиск моделей по параметрам
+				.dropdown__arrow
+					+icon('arrow-down', 'dropdown__arrow-icon')
+			include modules/forms/models-form
+			.models-result
+				+model('Aleksa R', 'model-1.png')
+				+model('Aleksa R', 'model-2.png')
+				+model('Aleksa R', 'model-3.png')
+				+model('Aleksa R', 'model-4.png')
+				+model('Aleksa R', 'model-5.png')
+				+model('Aleksa R', 'model-6.png')
+				+model('Aleksa R', 'model-7.png')
+				+model('Aleksa R', 'model-8.png')
+				+model('Aleksa R', 'model-9.png')
+				+model('Aleksa R', 'model-10.png')
+				+model('Aleksa R', 'model-11.png')
+				+model('Aleksa R', 'model-12.png')
+				a(href="#").button.models-result__button Загрузить еще 12 из 91

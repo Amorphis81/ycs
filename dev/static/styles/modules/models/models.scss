@@ -1,0 +1,115 @@
+.s-models {
+  padding-bottom: 104px;
+}
+
+.models {
+  &__title { margin-bottom: 50px; }
+  &-form {
+    margin-bottom: 56px;
+    display: flex;
+    justify-content: space-between;
+    &__dropdown {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 36px;
+      text-align: center;
+      color: $grey;
+      font-size: 16px;
+      font-weight: 500;
+      .dropdown {
+        &__title {
+          margin-right: 11px;
+        }
+        &__arrow {
+          display: flex;
+          width: 10px;
+          height: 5px;
+          &-icon {
+            width: 100%;
+            height: 100%;
+            fill: $grey;
+          }
+        }
+      }
+    }
+    &-block {
+      width: calc(100%/3);
+      &:first-child { 
+        max-width: 110px; 
+      }
+      &:nth-child(2){ flex-shrink: 1;}
+      &:nth-child(3){ flex-shrink: 1;}
+    }
+    &-row { 
+      margin-bottom: 36px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        margin: 0 8px;
+      }
+    }
+    
+  }
+  &-radio {
+    &__label {
+      display: block;
+      width: 110px;
+      &::before {
+        right: 0;
+        top: -2px;
+      }
+      &::after {
+        right: 4px;
+        top: 2px;
+      }
+    }
+  }
+  &-input{
+    &_small { 
+      width: 64px;
+    }
+    &_medium { width: 112px; }
+    &_big { width: 180px; }
+  }
+  &-result {
+    margin: 0 -15px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    &-item {
+      position: relative;
+      margin: 10px;
+      width: 220px;
+      height: 292px;
+      .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        &__title {
+          position: relative;
+          color: $white;
+          font-size: 24px;
+          &::before {
+            content: '';
+            width: 100px;
+            height: 1px;
+            position: absolute;
+            top: 16px;
+            left: -123px;
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+}

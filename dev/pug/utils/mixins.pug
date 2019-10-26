@@ -10,3 +10,17 @@ mixin persona(img)
 	a(href="static/images/content/persona/persona-1.png", data-rel="lightcase:myCollection").persona__img
 		img(src="static/images/content/persona/thumb/" + img, alt="")
 	//- .persona__img
+
+mixin breadcrumb()
+	.breadcrumbs
+		a(href="#").breadcrumbs__item Главная
+		span /
+		a(href="#").breadcrumbs__item.active Имиджи
+
+mixin option(val)
+	option(value=+val)= val
+
+mixin model(name, img)
+	a(href="#", style="background-image: url(static/images/content/models/"+ img +");").models-result-item
+		.wrap
+			.wrap__title= name
