@@ -14,7 +14,8 @@ block content
 			a(href="#").models-form__dropdown
 				.dropdown__title Поиск моделей по параметрам
 				.dropdown__arrow
-					+icon('arrow-down', 'dropdown__arrow-icon')
+					+icon('arrow-down', 'dropdown__arrow-icon dropdown__arrow-icon_down')
+					+icon('arrow-up', 'dropdown__arrow-icon dropdown__arrow-icon_up')
 			include modules/forms/models-form
 			.models-result
 				+model('Aleksa R', 'model-1.png')

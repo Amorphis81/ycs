@@ -8,7 +8,7 @@
 
 .display-block { display: block; }
 
-.display-flex { display: flex; }
+.display-flex { display: flex!important; }
 
 .right-0 { right: 0; }
 
@@ -76,11 +76,14 @@
   transform: scale(1);
 }
 
+.radio + label:hover::before { border: 2px solid $accent; }
+
 .input {
   padding: 3px 0;
   border: none;
   border-bottom: 1px solid $grey;
   &::placeholder { color: $grey; }
+  &:hover { border-bottom: 1px solid $accent; }
 }
 
 .select {
@@ -100,4 +103,18 @@ position: relative;
   background-position: center;
   z-index: 10;
  }
+}
+
+.button {
+  display: block;
+  padding: 10px 60px;
+  background-color: $accent;
+  color: $white;
+  text-align: center;
+  border: 1px solid transparent;
+  &:hover {
+    background-color: $white;
+    color: $accent;
+    border: 1px solid $accent;
+  }
 }

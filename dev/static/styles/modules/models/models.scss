@@ -6,8 +6,13 @@
   &__title { margin-bottom: 50px; }
   &-form {
     margin-bottom: 56px;
-    display: flex;
-    justify-content: space-between;
+    display: none;
+    .wrapper-form {
+      margin: 0 -15px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
     &__dropdown {
       display: flex;
       align-items: center;
@@ -28,18 +33,28 @@
           &-icon {
             width: 100%;
             height: 100%;
-            fill: $grey;
+            &_up {
+              display: none;
+              fill: $accent
+            }
+            &_down {
+              fill: $grey;              
+            }
           }
+        }
+      }
+      &.active {
+        color: $accent;
+        .dropdown__arrow-icon {
+          &_up { display: block; }
+          &_down { display: none; }
         }
       }
     }
     &-block {
-      width: calc(100%/3);
-      &:first-child { 
-        max-width: 110px; 
-      }
-      &:nth-child(2){ flex-shrink: 1;}
-      &:nth-child(3){ flex-shrink: 1;}
+      &:first-child { width: 110px; }
+      &:nth-child(2){ width: 310px; }
+      &:nth-child(3){ width: 310px; }
     }
     &-row { 
       margin-bottom: 36px;
@@ -84,8 +99,13 @@
       margin: 10px;
       width: 220px;
       height: 292px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      &:hover .wrap { opacity: 1; }
       .wrap {
         display: flex;
+        opacity: 0;
         align-items: center;
         justify-content: center;
         position: absolute;
@@ -95,6 +115,7 @@
         height: 100%;
         overflow: hidden;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        transition: all 0.3s ease;
         &__title {
           position: relative;
           color: $white;
@@ -111,5 +132,7 @@
         }
       }
     }
+    &__button { margin-top: 56px; }
   }
 }
+

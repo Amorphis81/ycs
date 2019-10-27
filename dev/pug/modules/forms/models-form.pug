@@ -1,60 +1,61 @@
 form.form.models-form
-  .models-form-block
-    .models-form-row
-      input(type="radio", name="models-radio-group")#models-radio__man.radio.models-radio
-      label(for="models-radio__man").models-radio__label Мужчины
-    .models-form-row
-      input(type="radio", name="models-radio-group")#models-radio__woman.radio.models-radio
-      label(for="models-radio__woman").models-radio__label Женщины
-    .models-form-row
-      input(type="radio", name="models-radio-group")#models-radio__all.radio.models-radio
-      label(for="models-radio__all").models-radio__label Все
-  // .models-form-block
-  .models-form-block
-    .models-form-row
-      label(for="height-from").label Рост
-      div
-        input(type="number", name="", placeholder="От")#height-from.input.models-input_medium
-        span.form__separator &mdash;
-        input(type="number", name="", placeholder="До")#height-to.input.models-input_medium
-    // .models-form-row
-    .models-form-row
-      label(for="clothing-size").label Размер одежды
-      .select
-        select(name="")#clothing-size.input.models-input_big
-          +option('Все')
-          +option('34')
-          +option('36')
-          +option('38')
-          +option('40')
-    .models-form-row
-      label(for="shoe-size").label Размер обуви
-      .select
-        select(name="")#shoe-size.input.models-input_big
-          +option('Все')
-          +option('34')
-          +option('34.5')
-          +option('35')
-          +option('35.5')
-  // .models-form-block
-  .models-form-block
-    .models-form-row
-      label(for="breast-size_from").label Размер груди
-      div
-        input(type="number", name="", placeholder="От")#breast-size_from.input.models-input_small
-        span.form__separator &mdash;
-        input(type="number", name="", placeholder="До")#breast-size_to.input.models-input_small
-    .models-form-row
-      label(for="waist-size_from").label Размер талии
-      div
-        input(type="number", name="", placeholder="От")#waist-size_from.input.models-input_small
-        span.form__separator &mdash;
-        input(type="number", name="", placeholder="До")#waist-size_to.input.models-input_small
-    .models-form-row
-      label(for="hips-size_from").label Размер бёдер
-      div
-        input(type="number", name="", placeholder="От")#hips-size_from.input.models-input_small
-        span.form__separator &mdash;
-        input(type="number", name="", placeholder="До")#hips-size_to.input.models-input_small
-  // .models-form-block
+  .wrapper-form
+    .models-form-block
+      .models-form-row
+        input(type="radio", name="models-radio-group")#models-radio__man.radio.models-radio
+        label(for="models-radio__man").models-radio__label Мужчины
+      .models-form-row
+        input(type="radio", name="models-radio-group")#models-radio__woman.radio.models-radio
+        label(for="models-radio__woman").models-radio__label Женщины
+      .models-form-row
+        input(type="radio", name="models-radio-group")#models-radio__all.radio.models-radio
+        label(for="models-radio__all").models-radio__label Все
+    // .models-form-block
+    .models-form-block
+      .models-form-row
+        label(for="height-from").label Рост
+        div
+          input(type="number", name="", placeholder="От")#height-from.input.models-input_medium
+          span.form__separator &mdash;
+          input(type="number", name="", placeholder="До")#height-to.input.models-input_medium
+      // .models-form-row
+      .models-form-row
+        label(for="clothing-size").label Размер одежды
+        .select
+          select(name="")#clothing-size.input.models-input_big
+            +option('Все')
+            +option('34')
+            +option('36')
+            +option('38')
+            +option('40')
+      .models-form-row
+        label(for="shoe-size").label Размер обуви
+        .select
+          select(name="")#shoe-size.input.models-input_big
+            +option('Все')
+            +option('34')
+            +option('34.5')
+            +option('35')
+            +option('35.5')
+    // .models-form-block
+    .models-form-block
+      .models-form-row
+        label(for="breast-size_from").label Размер груди
+        div
+          input(type="number", name="", placeholder="От")#breast-size_from.input.models-input_small
+          span.form__separator &mdash;
+          input(type="number", name="", placeholder="До")#breast-size_to.input.models-input_small
+      .models-form-row
+        label(for="waist-size_from").label Размер талии
+        div
+          input(type="number", name="", placeholder="От")#waist-size_from.input.models-input_small
+          span.form__separator &mdash;
+          input(type="number", name="", placeholder="До")#waist-size_to.input.models-input_small
+      .models-form-row
+        label(for="hips-size_from").label Размер бёдер
+        div
+          input(type="number", name="", placeholder="От")#hips-size_from.input.models-input_small
+          span.form__separator &mdash;
+          input(type="number", name="", placeholder="До")#hips-size_to.input.models-input_small
+    // .models-form-block
 // .models-form

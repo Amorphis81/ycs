@@ -68,4 +68,11 @@ $(document).ready(function () {
                         .setTween("#parallax7 > div", {y: "80%", ease: Linear.easeNone})
                         .addTo(controller);
     }
+
+    //Form Ajax dropdown
+    $('.models-form__dropdown').on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.models-form').slideToggle(300);
+    })
 });
