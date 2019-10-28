@@ -75,4 +75,18 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $('.models-form').slideToggle(300);
     })
+
+    //Swiper Slider
+    
+    //Thumbs
+    var galleryThumbs = new Swiper('.single-thumbs-container', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+      });
 });

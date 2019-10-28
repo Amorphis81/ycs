@@ -21,6 +21,9 @@ mixin option(val)
 	option(value=+val)= val
 
 mixin model(name, img)
-	a(href="#", style="background-image: url(static/images/content/models/"+ img +");").models-result-item
+	a(href="single-model.html", style="background-image: url(static/images/content/models/"+ img +");").models-result-item
 		.wrap
 			.wrap__title= name
+
+mixin swiper-slide(img)
+	.swiper-slide(style="background-image: url(static/images/content/single/"+ img +");")

@@ -12,6 +12,7 @@ module.exports = function () {
                             'plugins/gsap/TweenMax.min.js',
                             'plugins/gsap/ScrollMagic.js',
                             'plugins/gsap/animation.gsap.min.js',
+                            'plugins/swiper/swiper.min.js',
     ])
             .pipe(concat('libs.min.js'))
             .pipe($.gulp.dest(scriptsPATH.ouput));
@@ -23,6 +24,7 @@ module.exports = function () {
                             'plugins/gsap/TweenMax.min.js',
                             'plugins/gsap/ScrollMagic.js',
                             'plugins/gsap/animation.gsap.min.js',
+                            'plugins/swiper/swiper.min.js',
     ])
             .pipe(concat('libs.min.js'))
             .pipe(uglify({

@@ -66,6 +66,7 @@ body {
   max-width: $content-size;
   padding: 0 5px;
   width: 100%;
+  overflow-x: hidden;
   &-small { max-width: 940px; }
 }
 

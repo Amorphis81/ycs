@@ -1,0 +1,69 @@
+extends template/inside
+
+block variables
+	- var title = 'Страница модели'
+	- var pageClass = 'single-model-page'
+
+block content
+	section.s-breadcrumbs
+		.container
+			+breadcrumb
+	section.s-single-model
+		.container
+			h2.h2.single__title Модель Aleksa R
+			a(href="models.html").single-back
+				+icon('arrow-left', 'single-back__arrow')
+				.single-back__text В каталог моделей
+			.single-container
+				.swiper-container.single-photo
+					.swiper-wrapper
+						+swiper-slide('model-1.png')
+						+swiper-slide('model-2.png')
+						+swiper-slide('model-3.png')
+						+swiper-slide('model-4.png')
+				.single-params
+					.table
+						.table-column
+							.table-column-row
+								.table-column__cell Рост
+								.table-column__cell 170
+							// .table-column-row
+							.table-column-row
+								.table-column__cell Размер одежды
+								.table-column__cell 40
+							// .table-column-row
+							.table-column-row
+								.table-column__cell Размер обуви
+								.table-column__cell 38
+							// .table-column-row
+						// .table-column
+						.table-column
+							.table-column-row
+								.table-column__cell Грудь
+								.table-column__cell 81
+							// .table-column-row
+							.table-column-row
+								.table-column__cell Талия
+								.table-column__cell 60
+							// .table-column-row
+							.table-column-row
+								.table-column__cell Бедра
+								.table-column__cell 87
+							// .table-column-row
+						// .table-column
+					// table
+				// .single-params
+				.single-thumbs
+					.swiper-buttons
+						.single-thumbs__prev.single-thumbs-button
+							+icon('arrow-left')
+						.single-thumbs__next.single-thumbs-button
+							+icon('arrow-right')
+					.swiper-container.single-thumbs-container
+						.swiper-wrapper
+							+swiper-slide('model-1.png')
+							+swiper-slide('model-2.png')
+							+swiper-slide('model-3.png')
+							+swiper-slide('model-4.png')
+					// .swiper-container
+				// .single-thumbs
