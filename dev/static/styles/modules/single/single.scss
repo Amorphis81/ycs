@@ -31,12 +31,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+    order: 0;
   }
   &-params {
     margin-right: auto;
     padding-left: 68px;
     height: 186px;
     width: 80%;
+    order: 1;
     .table {
       display: flex;
       &-column {
@@ -58,6 +60,9 @@
     }
   }
   &-thumbs {
+    max-width: 700px;
+    width: 100%;
+    order: 2;
     .swiper-buttons {
       margin-bottom: 22px;
       display: flex;
@@ -68,6 +73,7 @@
       height: 10px;
       width: 5px;
       cursor: pointer;
+      outline: none;
       svg {
         width: 100%;
         height: 100%;
@@ -75,9 +81,13 @@
     }
     &__prev { margin-right: 27px; }
     &-container {
-      width: 700px;
-      height: 330px;
-      
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      .swiper-slide {
+        height: 330px;
+      }  
     }
   }
 }

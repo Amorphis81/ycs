@@ -84,9 +84,37 @@ $(document).ready(function () {
         slidesPerView: 3,
         spaceBetween: 20,
         loop: true,
-        freeMode: true,
         loopedSlides: 5, //looped slides should be the same
+        // freeMode: true,
         watchSlidesVisibility: true,
-        watchSlidesProgress: true,
+        navigation: {
+            nextEl: '.single-thumbs__next',
+            prevEl: '.single-thumbs__prev',
+        },
+        breakpoints: {
+            320: {
+                // slidesPerColumn: 2,
+                slidesPerView: 3,
+                spaceBetween: 8,
+            },
+            768: {
+                // slidesPerColumn: 1,
+                slidesPerView: 2,
+                spaceBetween: 5
+            },
+            1100: {
+              slidesPerView: 3,
+              spaceBetween: 10
+            },
+        }
+    });
+
+    var galleryTop = new Swiper('.single-photo', {
+        spaceBetween: 0,
+        loop:true,
+        loopedSlides: 5, //looped slides should be the same
+        thumbs: {
+          swiper: galleryThumbs,
+        },
       });
 });

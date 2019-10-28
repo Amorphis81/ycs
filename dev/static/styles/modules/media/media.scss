@@ -31,7 +31,9 @@
   
   .sandwich { display: block; }
   
+  .single-thumbs { max-width: 386px; }
   
+  .single-photo { margin-right: 10px; }
 }
 
 @media screen and (max-width: 768px){
@@ -51,6 +53,28 @@
     width: calc(100%/3 - 8px);
     height: 250px;
   }
+
+  .single-container { max-height: 100%;}
+
+  .single-photo { order: 1; }
+
+  .single-params { order: 0; }
+
+  .single-params .table { justify-content: center; }
+
+  .single-params { height: 120px; }
+  
+  .single-photo { margin: 0 auto; }
+
+  .single-thumbs { max-width: 100%;}
+
+  .single-thumbs-container .swiper-slide {
+    width: calc(100%/3);
+  }
+
+  .swiper-buttons { display: none!important; }
+
+  .single-photo { margin-bottom: 8px; }
 }
 
 @media screen and (max-width: 640px){
@@ -84,6 +108,7 @@
   }
 
   .models-result-item .wrap { opacity: 1;}
+
 }
 
 @media screen and (max-width: 560px){
@@ -133,6 +158,10 @@
   .works__title { margin-bottom: 43px; }
 
   .work-parallaxParent:last-child { margin-bottom: 48px; }
+
+  .single-params .table-column:first-child { margin-right: 40px; }
+
+  .single-thumbs-container .swiper-slide { height: 200px;}
 }
 
 @media screen and (max-width: 480px){
@@ -157,4 +186,8 @@
   .models-result-item { height: 121px; }
   
   .work-parallaxParent { height: 19vh; }
+
+  .single-photo { width: 100%; }
+
+  .single-thumbs-container .swiper-slide { height: 130px;}
 }
