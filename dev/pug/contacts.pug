@@ -1,0 +1,52 @@
+extends template/inside
+
+block variables
+	- var title = 'Контакты'
+	- var pageClass = 'single-model-page'
+
+block content
+	section.s-breadcrumbs
+		.container
+			+breadcrumb
+	section.s-contacts
+		.container
+			h2.h2.contacts__title Контакты
+			.contacts-wrapper
+				.contacts-location
+					.contacts-location-info
+						.contacts-location__title Как нас найти
+						.location-block
+							.location__title Адрес
+							.location__text г. Москва, м. Добрынинская/Серпуховская, Партийный переулок д.1 к11
+						// .location-block
+						.location-block
+							.location__title График работы
+							.location__text Пн-Вс 10:00 - 19:00
+						// .location-block
+						.location-block
+							.location__title Телефон
+							.location__text +7 (925) 483 80 11
+						// .location-block
+						.location-block
+							.location__title E-mail
+							.location__text yourchoiceproduction@gmail.com
+						// .location-block
+					// .contacts-location-info
+					.location-icons
+						a(href="#").location-icons-item
+							+icon('instagram', 'location-icons__instagram')
+						a(href="#").location-icons-item
+							+icon('facebook', 'location-icons__facebook')
+						a(href="#").location-icons-item
+							+icon('vk', 'location-icons__vk')
+				// contacts-location
+				.contacts-feedback
+					.feedback__title Связаться с нами
+					form.feedback-form
+						input(type="text", name="", placeholder="Имя").input.feedback-form__input
+						input(type="tel", name="", placeholder="Номер").input.feedback-form__input
+						input(type="email", name="", placeholder="E-mail").input.feedback-form__input
+						input(type="text", name="", placeholder="Сообщение").input.feedback-form__input
+						button(type="submit").button.feedback-form__button Отправить
+					// .feedback-form
+				// .contact-feedback
