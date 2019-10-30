@@ -15,12 +15,13 @@ module.exports = function () {
     $.gulp.task('styles:dev', () => {
         return $.gulp.src(stylesPATH.input + 'styles.scss')
             .pipe(plumber())
-            .pipe(sourcemaps.init())
+            // .pipe(sourcemaps.init())
             .pipe(scss())
             .pipe(cssimport())
             .pipe(autoprefixer(['> 0.1%']))
-            .pipe(sourcemaps.write())
-            .pipe(rename('styles.min.css'))
+            // .pipe(sourcemaps.write())
+            // .pipe(rename('styles.min.css'))
+            .pipe(rename('styles.css'))
             .pipe($.gulp.dest(stylesPATH.ouput))
             .on('end', $.browserSync.reload);
     });
