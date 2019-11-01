@@ -1,0 +1,37 @@
+extends template/inside
+
+block variables
+	- var title = 'Блог'
+	- var pageClass = 'blog-page'
+
+block content
+	section.s-breadcrumbs
+		.container
+			+breadcrumb
+	section.s-blog
+		.container.container-small
+			h2.h2.blog__title Блог
+			.blog-container
+				.blog-list
+					+blog-item('blog-1.png')
+					+blog-item('blog-2.png')
+					+blog-item('blog-3.png')
+					+blog-item('blog-4.png')
+					+blog-item('blog-5.png')
+					+blog-item('blog-6.png')
+					button.button.blog__button Загрузить еще
+				// .blog-list
+				aside.blog-sidebar
+					.sidebar-search
+						.sidebar-search__icon
+							+icon('search')
+						input(type="text", name="", placeholder="Поиск").input.sidebar-search__input
+					// .sidebar-search
+					.sidebar-select
+						a(href="#").sidebar-select__link Архив
+							+icon('arrow-down', 'sidebar-select__link-icon')
+					.sidebar-select
+						a(href="#").sidebar-select__link Тэги
+							+icon('arrow-down', 'sidebar-select__link-icon')
+				// .blog-sidebar
+			// .blog-container

@@ -1,0 +1,88 @@
+.s-blog { margin-bottom: 104px; }
+
+.blog {
+  &__title { margin-bottom: 48px; }
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-list {
+    max-width: 640px;
+    order: 0;
+  }
+  &-item {
+    margin-bottom: 40px;
+    display: flex;
+    &__img {
+      margin-right: 20px;
+      width: 222px;
+      min-height: 144px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &-content {
+      max-width: 400px;
+      color: $accent;
+    }
+    &__title {
+      margin-bottom: 16px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    &__text {
+      margin-bottom: 16px;
+      line-height: 22px;
+    }
+    &__date {
+      font-size: 13px;
+      color: $grey;
+    }
+  }
+  &__button{ 
+    margin: 0 auto;
+    padding: 10px 75px;
+  }
+  &-sidebar {
+    max-width: 220px;
+    .sidebar{
+      &-search {
+        margin-bottom: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__icon {
+          margin-right: 15px;
+          display: flex;
+          width: 16px;
+          height: 16px;
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &__input {
+          width: 100%;
+          max-width: 188px;
+        }
+      }
+      &-select {
+        margin-bottom: 50px;
+        &__link {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          font-weight: 500;
+          color: $grey;
+          &-icon {
+            margin-top: 2px;
+            margin-left: 10px;
+            width: 15px;
+            height: 10px;
+            fill: $grey;
+          }
+        }
+      }
+    }
+  }
+}

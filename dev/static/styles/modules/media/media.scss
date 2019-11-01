@@ -162,6 +162,31 @@
   .single-params .table-column:first-child { margin-right: 40px; }
 
   .single-thumbs-container .swiper-slide { height: 200px;}
+
+  .contacts {
+    &-wrapper {
+      flex-direction: column;
+    }
+    &__title { margin-bottom: 40px; }
+    &-location {
+      margin-bottom: 40px;
+      &__title { margin-bottom: 24px; }
+      &-info { margin-bottom: 8px; }
+    }
+  }
+
+  .location-icons-item.location-icons-item {
+    &_phone { display: block; }
+  }
+
+  .contacts-location .location__text { max-width: 100%; }
+
+  .contacts-feedback .feedback__title,
+  .contacts-feedback .feedback-form { display: none; }
+
+  .feedback__button { display: block; }
+
+  .s-map { margin-bottom: 48px; }
 }
 
 @media screen and (max-width: 480px){

@@ -2,9 +2,17 @@ extends template/inside
 
 block variables
 	- var title = 'Контакты'
-	- var pageClass = 'single-model-page'
+	- var pageClass = 'contacts-page'
 
 block content
+	.contacts-popup
+		a(href="#").contacts-popup-link
+			.link__icon
+				+icon('arrow-left')
+			.link__text Контакты
+		.contacts-popup-content
+			include modules/forms/contacts-feedback
+	// .contacts-popup
 	section.s-breadcrumbs
 		.container
 			+breadcrumb
@@ -33,20 +41,19 @@ block content
 						// .location-block
 					// .contacts-location-info
 					.location-icons
+						a(href="#").location-icons-item.location-icons-item_phone
+							+icon('phone', 'location-icons__phone')
+						a(href="#").location-icons-item.location-icons-item_whatsapp
+							+icon('whatsapp', 'location-icons__whatsapp')
 						a(href="#").location-icons-item
 							+icon('instagram', 'location-icons__instagram')
 						a(href="#").location-icons-item
 							+icon('facebook', 'location-icons__facebook')
 						a(href="#").location-icons-item
-							+icon('vk', 'location-icons__vk')
+							+icon('telegram', 'location-icons__telegram')
 				// contacts-location
 				.contacts-feedback
-					.feedback__title Связаться с нами
-					form.feedback-form
-						input(type="text", name="", placeholder="Имя").input.feedback-form__input
-						input(type="tel", name="", placeholder="Номер").input.feedback-form__input
-						input(type="email", name="", placeholder="E-mail").input.feedback-form__input
-						input(type="text", name="", placeholder="Сообщение").input.feedback-form__input
-						button(type="submit").button.feedback-form__button Отправить
-					// .feedback-form
-				// .contact-feedback
+					include modules/forms/contacts-feedback
+				a(href="#").button.feedback__button Связаться с нами
+	// section.s-contacts
+	section.s-map <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abbaee87348e206311ab52ae3ede2f553f4561de92ed2e7903ed74e3c64d77024&amp;width=100%25&amp;height=480&amp;lang=ru_RU&amp;scroll=false"></script>

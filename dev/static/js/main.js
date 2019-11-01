@@ -109,6 +109,7 @@ $(document).ready(function () {
         }
     });
 
+    //Big Photo
     var galleryTop = new Swiper('.single-photo', {
         spaceBetween: 0,
         loop:true,
@@ -117,4 +118,15 @@ $(document).ready(function () {
           swiper: galleryThumbs,
         },
       });
+
+    // Contacnt popup
+    $('.feedback__button').on('click', function(e){
+        e.preventDefault();
+        $('.contacts-popup').addClass('active');
+    })
+
+    $('.contacts-popup-link').on('click', function(e) {
+        e.preventDefault();
+        $('.contacts-popup').removeClass('active');
+    })
 });
