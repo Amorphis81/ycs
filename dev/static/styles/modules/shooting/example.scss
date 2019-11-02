@@ -1,0 +1,30 @@
+.s-shooting-example {
+  margin-bottom: 104px;
+}
+
+.example {
+  &__title { margin-bottom: 56px; }
+  &-container {
+    margin: 0 -16px 56px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 188px;
+    height: 282px;
+    background: linear-gradient(0deg, #F5F5F5, #F5F5F5);
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__button {
+    margin: 0 auto;
+    padding: 10px 53px;
+  }
+}

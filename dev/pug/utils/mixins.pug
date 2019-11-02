@@ -8,7 +8,12 @@ mixin icon(name,mod)
 
 mixin persona(img)
 	a(href="static/images/content/persona/persona-1.png", data-rel="lightcase:myCollection").persona__img
-		img(src="static/images/content/persona/thumb/" + img, alt="")
+		img(src="static/images/content/persona/thumb/" + img, alt="Persona")
+	//- .persona__img
+
+mixin example(img)
+	a(href="static/images/content/persona/persona-1.png", data-rel="lightcase:exampleCollection").example__img
+		img(src="static/images/content/example/" + img, alt="Example")
 	//- .persona__img
 
 mixin breadcrumb()
@@ -16,6 +21,14 @@ mixin breadcrumb()
 		a(href="#").breadcrumbs__item Главная
 		span /
 		a(href="#").breadcrumbs__item.active Имиджи
+
+mixin breadcrumb-shooting(name)
+	.breadcrumbs
+		a(href="#").breadcrumbs__item Главная
+		span /
+		a(href="#").breadcrumbs__item Съемки
+		span /
+		a(href="#").breadcrumbs__item.active= name
 
 mixin option(val)
 	option(value=+val)= val

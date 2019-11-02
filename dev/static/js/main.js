@@ -129,4 +129,22 @@ $(document).ready(function () {
         e.preventDefault();
         $('.contacts-popup').removeClass('active');
     })
+
+    // Shooting parallax
+    new ScrollMagic.Scene({triggerElement: "#parallax1"})
+    .setTween("#shooting-parallax > div", {y: "200%", ease: Linear.easeNone})
+    .addTo(controller);
+
+    //Shooting popup
+    $('.catalog-block-order__button').on('click', function(e){
+        e.preventDefault();
+        // $('.shooting-popup-overlay').toggleClass('display-flex');
+        $('.shooting-popup-overlay').show();
+    })
+
+    $('.popup__close').on('click', function(e){
+        e.preventDefault();
+        // $('.shooting-popup-overlay').toggleClass('display-none')
+        $('.shooting-popup-overlay').hide();
+    })
 });

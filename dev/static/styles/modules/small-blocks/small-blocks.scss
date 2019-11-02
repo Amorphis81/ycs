@@ -6,9 +6,18 @@
   letter-spacing: 0.08em;
 }
 
+.h3 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
 .display-block { display: block; }
 
 .display-flex { display: flex!important; }
+
+.display-none { display: none!important; }
 
 .right-0 { right: 0; }
 
