@@ -27,11 +27,13 @@ block content
 							+icon('search')
 						input(type="text", name="", placeholder="Поиск").input.sidebar-search__input
 					// .sidebar-search
-					.sidebar-select
-						a(href="#").sidebar-select__link Архив
-							+icon('arrow-down', 'sidebar-select__link-icon')
-					.sidebar-select
-						a(href="#").sidebar-select__link Тэги
-							+icon('arrow-down', 'sidebar-select__link-icon')
+					.sidebar-select-wrapper
+						.sidebar-select
+							a(href="#").sidebar-select__link Архив
+								+icon('arrow-down', 'sidebar-select__link-icon')
+						.sidebar-select
+							a(href="#").sidebar-select__link Тэги
+								+icon('arrow-down', 'sidebar-select__link-icon')
+					// .sidebar-select-wrapper
 				// .blog-sidebar
 			// .blog-container
