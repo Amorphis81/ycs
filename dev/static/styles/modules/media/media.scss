@@ -123,6 +123,42 @@
   }
 
   .models-result-item .wrap { opacity: 1;}
+
+  // .s-shooting-catalog label { display: block;}
+  .s-shooting-catalog label { display: inline-block;}
+
+  .catalog-block__title { display: none; }
+
+  .content-tab {display: none;}
+
+  /* Активация секций с помощью псевдокласса :checked */
+
+  #tab1:checked ~ .catalog > .catalog-block > #content-tab1,
+  #tab2:checked ~ .catalog > .catalog-block > #content-tab2, 
+  #tab3:checked ~ .catalog > .catalog-block > #content-tab3 {
+    display: block;
+  }
+
+  .s-shooting-catalog .catalog {
+    justify-content: center;
+  }
+
+  .s-shooting-catalog .container {
+    text-align: justify;
+  }
+
+  .example-container {
+    margin: 0 0px 12px;
+  }
+
+  .example__img {
+    width: 90px;
+    height: 121px;
+  }
+
+  .s-shooting-example { margin-bottom: 48px; }
+
+  .example__button { width: 100%;  }
 }
 
 @media screen and (max-width: 560px) {
@@ -214,6 +250,17 @@
       &__date { color: $white; }
     }
   }
+
+  .shooting-parallax { height: 193px; }
+
+  .s-shooting-catalog { padding: 40px 0 50px; }
+  
+  .s-shooting-catalog label {
+    margin-right: 5px;
+    width: calc(100%/3 - 8px);
+    font-size: 12px;
+  }
+
 }
 
 @media screen and (max-width: 480px){

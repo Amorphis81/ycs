@@ -1,0 +1,133 @@
+extends template/inside
+
+block variables
+	- var title = 'Сборные съемки'
+	- var pageClass = 'team-shooting-page'
+
+block content
+	section.s-breadcrumbs
+		.container
+			+breadcrumb-shooting('Сборные съемки')
+	.shooting-popup-overlay
+		.popup__close
+			+icon('close')
+		.popup-window
+			.popup__title Оставить заявку
+			form.popup-form
+				input(type="text", name="", placeholder="Имя").input.popup-form__input
+				input(type="tel", name="", placeholder="Номер").input.popup-form__input
+				input(type="email", name="", placeholder="E-mail").input.popup-form__input
+				input(type="text", name="", placeholder="Сообщение").input.popup-form__input
+				button(type="submit").button.popup__button Отправить
+			// .popup-form
+		// .popup-window
+	// .shooting-popup-overlay
+	section.s-shooting-main
+		h2.h2.shooting__title Сборные съемки
+		#shooting-parallax.shooting-parallax
+			.shooting-parallax__content(style="background-image: url(static/images/content/shooting-parallax/parallax-3.png);")
+	//.s-shooting-main
+	section.s-team-sign
+		.container
+			h3.h3.team-sign__title Записаться на съемку
+			.team-sign-buttons
+				.team-sign__prev.team-sign-button
+					+icon('arrow-left')
+				.team-sign__next.team-sign-button
+					+icon('arrow-right')
+		// .container
+		.swiper-container.team-sign-slider
+			.swiper-wrapper
+				+team-slide('team-1.png')
+				+team-slide('team-2.png')
+				+team-slide('team-3.png')
+				+team-slide('team-4.png')
+				+team-slide('team-5.png')
+	section.s-team-about
+		.container.container-small
+			h3.h3.about__title Об услуге
+			.about__descr В данном виде съемки любой желающий может принести любое количество изделий на съемку.
+			.about-tabs
+				input(type="radio", name="tabs", checked)#tab1.about__tab
+				label(for="tab1", title="Стоимость съемки") Стоимость съемки
+				input(type="radio", name="tabs")#tab2.about__tab
+				label(for="tab2", title="В стоимость входи") В стоимость входит
+				input(type="radio", name="tabs")#tab3.about__tab
+				label(for="tab3", title="Стоимость съемки") дополнительно	
+
+				#content-tab1.content-tab
+					.content-tab-row
+						.content-tab-row__right до <span>10</span> артикулов
+						.content-tab-row__left <span>1500</span> ₽/арт
+					// .content-tab-row
+
+					.content-tab-row
+						.content-tab-row__right от <span>11</span> до <span>15</span> артикулов
+						.content-tab-row__left <span>1400</span> ₽/арт
+					// .content-tab-row
+
+					.content-tab-row
+						.content-tab-row__right от <span>16</span> до <span>25</span>
+						.content-tab-row__left <span>1300</span> ₽/арт
+					// .content-tab-row
+
+					.content-tab-row
+						.content-tab-row__right от <span>26</span>
+						.content-tab-row__left <span>1200</span> ₽/арт
+					// .content-tab-row
+
+					a(href="#").button.content-tab__button Заказать
+
+				// .content-tab
+
+				#content-tab2.content-tab
+					ul.content-tab-list
+						li.content-tab-list__item услуги фотографа
+						li.content-tab-list__item ретушь любых 5 фото
+						li.content-tab-list__item фотостудия
+						li.content-tab-list__item услуги визажиста
+						li.content-tab-list__item базовые обувь, одежда, аксессуары и украшения на съемку
+						li.content-tab-list__item консультация стилиста на съемке
+						li.content-tab-list__item услуги модели
+						li.content-tab-list__item услуги двух ассистентов на съемке
+							.content-tab-list__item-descr (отпаривание изделий, помощь в переодевании)						
+						li.content-tab-list__item все исходники с цветокоррекцией и форматированием под маркетплейс Wildberries
+					a(href="#").button.content-tab__button Заказать
+				// .content-tab
+
+				#content-tab3.content-tab
+					.content-tab-row
+						.content-tab-row__right Ретушь дополнительных фото
+						.content-tab-row__left <span>60</span> ₽/фото
+					// .content-tab-row
+
+					.content-tab-row
+						.content-tab-row__right Видео проходка 1
+							.content-tab-row__right-descr (10 секунд)
+						.content-tab-row__left <span>500</span> ₽/ролик
+					// .content-tab-row
+
+					.content-tab-row
+						.content-tab-row__right Видео проходка 2
+							.content-tab-row__right-descr (15 секунд)
+						.content-tab-row__left <span>700</span> ₽/ролик
+					// .content-tab-row
+
+					.content-tab-row
+						.content-tab-row__right Имиджевое видео
+							.content-tab-row__right-descr (20-30 секунд)
+						.content-tab-row__left <span>1200</span> ₽/ролик
+					// .content-tab-row
+
+					.content-tab-row
+						.content-tab-row__right Смена цвета фона
+							.content-tab-row__right-descr (при заказе 10 артикулов - смена 1 цвета фона бесплатно)
+						.content-tab-row__left <span>500</span> ₽
+					// .content-tab-row
+
+					a(href="#").button.content-tab__button Заказать
+
+				// .content-tab
+			// .about-tabs
+
+	include modules/blocks/example 

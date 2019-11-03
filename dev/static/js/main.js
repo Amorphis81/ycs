@@ -147,4 +147,14 @@ $(document).ready(function () {
         // $('.shooting-popup-overlay').toggleClass('display-none')
         $('.shooting-popup-overlay').hide();
     })
+
+    // Team slider
+    var galleryTeam = new Swiper('.team-sign-slider', {
+        slidesPerView: 6,
+        loop: true,
+        navigation: {
+            nextEl: '.team-sign__next',
+            prevEl: '.team-sign__prev',
+        },
+    });
 });

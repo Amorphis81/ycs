@@ -41,6 +41,10 @@ mixin model(name, img)
 mixin swiper-slide(img)
 	.swiper-slide(style="background-image: url(static/images/content/single/"+ img +");")
 
+mixin team-slide(img)
+	.swiper-slide(style="background-image: url(static/images/content/team/"+ img +");")
+		a(href="#") Записаться на <span>25.12.2019</span>
+
 mixin blog-item(img)
 	.blog-item(style="background-image: url(static/images/content/blog/"+ img +");")
 		.blog-item__img(style="background-image: url(static/images/content/blog/"+ img +");")

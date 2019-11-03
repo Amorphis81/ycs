@@ -30,82 +30,74 @@ block content
 	section.s-shooting-catalog
 		.container
 			h3.h3.shooting__subtitle Стоимость услуг
+			input(type="radio", name="tabs", checked)#tab1
+			label(for="tab1", title="Бижутерии и сложные бликующие предметы") Бижутерии и сложные бликующие предметы
+			
+			input(type="radio", name="tabs")#tab2
+			label(for="tab2", title="Сумки, обувь, головные уборы") Сумки, обувь, головные уборы
+			
+			input(type="radio", name="tabs")#tab3
+			label(for="tab3", title="Ремни, косметика и прочее") Ремни, косметика и прочее
+
 			.catalog
 				.catalog-block
 					.catalog-block__title Бижутерии и сложные бликующие предметы
-					.catalog-block__note от 10 артикулов
-					.catalog-block-list
-						.catalog-block-list__title В стоиомсть входит:
-						ul
-							li распаковка
-							li подготовка к съемке
-							li фотосъемка
-							li ретушь
-					// .catalog-block-list
-					.catalog-block-order
-						.catalog-block-order__price <span>300</span> ₽/фото
-						button.button.catalog-block-order__button Заказать
-					// .catalog-block-order
+					#content-tab1.content-tab
+						.catalog-block__note от 10 артикулов
+						.catalog-block-list
+							.catalog-block-list__title В стоиомсть входит:
+							ul
+								li распаковка
+								li подготовка к съемке
+								li фотосъемка
+								li ретушь
+						// .catalog-block-list
+						.catalog-block-order
+							.catalog-block-order__price <span>300</span> ₽/фото
+							button.button.catalog-block-order__button Заказать
+						// .catalog-block-order
+					// .content-tab
 				// .catalog-block
 				
 				.catalog-block
 					.catalog-block__title Сумки, обувь, головные уборы
-					.catalog-block__note от 1 артикула
-					.catalog-block-list
-						.catalog-block-list__title В стоиомсть входит:
-						ul
-							li распаковка
-							li подготовка к съемке
-							li фотосъемка
-							li ретушь
-					// .catalog-block-list
-					.catalog-block-order
-						.catalog-block-order__price <span>350</span> ₽/фото
-						button.button.catalog-block-order__button Заказать
-					// .catalog-block-order
+					#content-tab2.content-tab
+						.catalog-block__note от 1 артикула
+						.catalog-block-list
+							.catalog-block-list__title В стоиомсть входит:
+							ul
+								li распаковка
+								li подготовка к съемке
+								li фотосъемка
+								li ретушь
+						// .catalog-block-list
+						.catalog-block-order
+							.catalog-block-order__price <span>350</span> ₽/фото
+							button.button.catalog-block-order__button Заказать
+						// .catalog-block-order
+					// .content-tab
 				// .catalog-block
 
 				.catalog-block
 					.catalog-block__title Ремни, косметика и прочее
-					.catalog-block__note от 10 артикулов
-					.catalog-block-list
-						.catalog-block-list__title В стоиомсть входит:
-						ul
-							li распаковка
-							li подготовка к съемке
-							li фотосъемка
-							li ретушь
-					// .catalog-block-list
-					.catalog-block-order
-						.catalog-block-order__price <span>150</span> ₽/фото
-						button.button.catalog-block-order__button Заказать
-					// .catalog-block-order
+					#content-tab3.content-tab
+						.catalog-block__note от 10 артикулов
+						.catalog-block-list
+							.catalog-block-list__title В стоиомсть входит:
+							ul
+								li распаковка
+								li подготовка к съемке
+								li фотосъемка
+								li ретушь
+						// .catalog-block-list
+						.catalog-block-order
+							.catalog-block-order__price <span>150</span> ₽/фото
+							button.button.catalog-block-order__button Заказать
+						// .catalog-block-order
+					// .content-tab
 				// .catalog-block
 
 			// .catalog
 	//.s-shooting-catalog
 
-	section.s-shooting-example
-		.container
-			h3.h3.example__title Примеры работ
-			.example-container
-				+example('example-1.png')
-				+example('example-2.png')
-				+example('example-3.png')
-				+example('example-4.png')
-				+example('example-5.png')
-				+example('example-6.png')
-				+example('example-1.png')
-				+example('example-2.png')
-				+example('example-3.png')
-				+example('example-4.png')
-				+example('example-5.png')
-				+example('example-6.png')
-				+example('example-1.png')
-				+example('example-2.png')
-				+example('example-3.png')
-				+example('example-4.png')
-				+example('example-5.png')
-				+example('example-6.png')
-			// .example-container
-			button.button.example__button Показать больше работ
+	include modules/blocks/example 
