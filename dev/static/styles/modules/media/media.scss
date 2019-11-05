@@ -159,6 +159,20 @@
   .s-shooting-example { margin-bottom: 48px; }
 
   .example__button { width: 100%;  }
+
+  .team-sign-slider .swiper-slide a {
+    font-size: 15px;
+    span {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  .about-tabs label {
+    margin-right: 10px;
+    margin-bottom: 24px;
+    width: calc(100%/3 - 14px);
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -261,6 +275,25 @@
     font-size: 12px;
   }
 
+  .team-sign-slider { height: 220px; }
+
+  .s-team-sign { margin: 45px 0 32px; }
+
+  .about-tabs label { font-size: 12px; }
+
+  .about-tabs .content-tab-list {
+    columns: 1px;
+  }
+
+  .about-tabs #content-tab2 .content-tab-list { 
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-tabs #content-tab2 { width: 100%; }
+
+  .s-team-about { margin-bottom: 32px; }
 }
 
 @media screen and (max-width: 480px){
@@ -289,4 +322,28 @@
   .single-photo { width: 100%; }
 
   .single-thumbs-container .swiper-slide { height: 130px;}
+
+  .team-sign-slider .swiper-slide a {
+    font-size: 14px;
+    span {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .team-sign-slider { height: 150px; }
+}
+
+@media screen and (max-width: 480px) {
+  .team-sign-slider .swiper-slide a {
+    font-size: 10px;
+    span {
+      font-size: 10px;
+      font-weight: 500;
+    }
+  }
+
+  .team-sign-slider { height: 117px; }
+
+  .about-tabs label { margin-right: 0; }
 }

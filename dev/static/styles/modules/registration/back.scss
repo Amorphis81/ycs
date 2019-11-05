@@ -1,0 +1,23 @@
+.s-back {
+  margin-bottom: 48px;
+  display: flex;
+}
+
+.back {
+  padding: 32px 36px 28px 45px;
+  display: flex;
+  align-items: center;
+  color: $grey;
+  background-color: #F5F5F5;
+  &__arrow {
+    margin-right: 14px;
+    display: flex;
+    width: 10px;
+    height: 10px;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $grey;
+    }
+  }
+}

@@ -87,6 +87,34 @@
 
 .radio + label:hover::before { border: 2px solid $accent; }
 
+.checkbox { display: none; }
+
+.checkbox + label {
+  position: relative;
+  padding-left: 30px;
+  line-height: 22px;
+  span { font-weight: bold; }
+}
+
+.checkbox + label:before {
+  content: "\2713";
+  color: transparent;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  border: 2px solid $grey;
+  font-size: 14px;    
+  line-height: 13px;
+  height: 16px;
+  width: 16px;
+  text-align: center;
+  transition: color ease .3s;
+}
+
+.checkbox:checked + label:before {
+  color: #000;
+}
+
 .input {
   padding: 3px 0;
   border: none;

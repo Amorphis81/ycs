@@ -150,11 +150,39 @@ $(document).ready(function () {
 
     // Team slider
     var galleryTeam = new Swiper('.team-sign-slider', {
-        slidesPerView: 6,
+        // slidesPerView: 6,
         loop: true,
         navigation: {
             nextEl: '.team-sign__next',
             prevEl: '.team-sign__prev',
         },
+        breakpoints: {
+            1024: { slidesPerView: 6 },
+            768: { slidesPerView: 5 },
+            560: { slidesPerView: 4 },
+            320: { slidesPerView: 3 },
+        },
+    });
+
+    // Reg Slider
+    var regSliderThumbs = new Swiper('.reg-slider-thumbs', {
+        slidesPerView: 2,
+        slidesPerColumn: 2,
+        loop: true,
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        navigation: {
+            nextEl: '.reg-slider__next',
+            prevEl: '.reg-slider__prev',
+        },
+    });
+
+    var regSlider = new Swiper('.reg-slider-main', {
+        loop: true,
+        thumbs: {
+            swiper: regSliderThumbs,
+          },
     });
 });
