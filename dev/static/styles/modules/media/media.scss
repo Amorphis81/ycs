@@ -92,6 +92,50 @@
       }
     }
   }
+
+  .reg {
+    &-info { flex-direction: column; }
+    &-params {
+      &-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      &-row {
+        width: calc(100%/2 - 45px);
+      }
+    }
+  }
+
+  .reg-format {
+    &-checkbox {
+      height: 66px;
+    }
+    &-block { width: calc(100%/3 - 16px); }
+    &-number {
+      &__text { display: none;}
+      &__input {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .reg-form-blocks {
+    flex-direction: column;
+    .form-block {
+      margin-right: 0;
+      margin-bottom: 32px;
+      width: 100%;
+    }
+  }
+
+  .reg-form-blocks .form-block__title { margin-bottom: 18px; }
+
+  .swiper-container.reg-slider-main,
+  .swiper-container.reg-slider-thumbs {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 640px){
@@ -173,6 +217,14 @@
     margin-bottom: 24px;
     width: calc(100%/3 - 14px);
   }
+
+  .reg-params-row { width: calc(100%/2 - 90px); }
+
+  .reg-format-block {
+    width: calc(100%/3 - 8px);
+  }
+
+  .reg-format__video { height: 250px; }
 }
 
 @media screen and (max-width: 560px) {
@@ -294,6 +346,38 @@
   .about-tabs #content-tab2 { width: 100%; }
 
   .s-team-about { margin-bottom: 32px; }
+
+  .s-back { margin-bottom: 24px; }
+  .reg__title { font-size: 24px; }
+
+  .reg-params-row { width: calc(100%/2 - 50px); }
+
+  .reg-format__video { height: 220px; }
+
+  .reg-buttons {
+    flex-direction: column;
+  }
+
+  .reg__button {
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: 100%; 
+  }
+
+  .reg-format {
+    margin-bottom: 32px;
+  }
+
+  .reg-smallblock-title { margin-bottom: 16px; }
+
+  .reg-smallblock { margin-bottom: 32px; }
+
+  .swiper-container.reg-slider-main,
+  .swiper-container.reg-slider-thumbs {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
 @media screen and (max-width: 480px){
@@ -332,6 +416,10 @@
   }
 
   .team-sign-slider { height: 150px; }
+
+  .reg-format-checkbox {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -346,4 +434,15 @@
   .team-sign-slider { height: 117px; }
 
   .about-tabs label { margin-right: 0; }
+
+  .reg-format-block { max-width: 104px; }
+
+  .reg-format__video { height: 143px; }
+
+  .reg-format-checkbox { 
+    display: flex; 
+    align-items: flex-start;
+    height: 110px;
+  }
+
 }

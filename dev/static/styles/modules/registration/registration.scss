@@ -25,7 +25,10 @@
   &-params {
     display: flex;
     flex-direction: column;
-    &__title { margin-bottom: 40px; }
+    &__title { 
+      margin-bottom: 40px; 
+      margin-top: 42px;
+    }
     &-content {
       display: flex;
       flex-direction: column;
@@ -138,6 +141,8 @@
     &__video {
       margin-bottom: 36px;
       height: 294px;
+      background-position: center;
+      background-size: cover;
     }
     &-number {
       display: flex;
@@ -178,4 +183,22 @@
     margin-right: 24px;
     padding: 10px 32px;
   }
+  &-sum {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    &__text {
+      margin-right: 12px;
+      color: $grey;
+    }
+    &__num {
+      font-weight: 500;
+    }
+  }
 }
+
+// .reg-slider-wrapper {
+//   justify-content: center;
+// }
+
+.reg-format-checkbox { vertical-align: top;}

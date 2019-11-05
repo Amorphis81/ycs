@@ -166,8 +166,8 @@ $(document).ready(function () {
 
     // Reg Slider
     var regSliderThumbs = new Swiper('.reg-slider-thumbs', {
-        slidesPerView: 2,
-        slidesPerColumn: 2,
+        // slidesPerView: 2,
+        // slidesPerColumn: 2,
         loop: true,
         freeMode: true,
         loopedSlides: 5, //looped slides should be the same
@@ -176,6 +176,10 @@ $(document).ready(function () {
         navigation: {
             nextEl: '.reg-slider__next',
             prevEl: '.reg-slider__prev',
+        },
+        breakpoints: {
+            560: { slidesPerView: 2, slidesPerColumn: 2, },
+            320: { slidesPerView: 1, slidesPerColumn: 2,y },
         },
     });
 

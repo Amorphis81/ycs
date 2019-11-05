@@ -167,9 +167,17 @@ block content
 					input(type="text", name="", placeholder="Ответ").input.reg-smallblock__input
 				// .reg-smallblock
 
+				.reg-sum
+					.reg-sum__text Итогая сумма:
+					.reg-sum__num 2500 ₽
+
+				.reg-agree
+					input(type="checkbox", name="know-check")#know-check.checkbox.reg-agree__checkbox
+					label(for="know-check") Ознакомлен с правилами участия в фотосъемке
+				
 				.reg-agree
 					input(type="checkbox", name="agree-check")#agree-check.checkbox.reg-agree__checkbox
-					label(for="agree-check") Ознакомлен с правилами участия в фотосъемке
+					label(for="agree-check") Подтверждаю заказ даю cогласие на обработку персональных данных
 
 				.reg-buttons
 					button(type="submit").button.reg__button Оплатить как физ. лицо
