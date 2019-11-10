@@ -14,6 +14,7 @@ block content
 		.container.container-reg
 			h2.h2.reg__title Запись на сборную съемку на 04.10
 			.reg__descr Чтобы записаться на съемку, заполните данную форму. После заполнения формы в течение дня с вами свяжется наш менеджер.
+			.reg-title.reg-top__title Локация съемки - на циклораме и фонах
 			.reg-info
 				.reg-params
 					.reg-title.reg-params__title Модель Анастасия
@@ -60,11 +61,10 @@ block content
 					.reg-slider-wrapper
 						.swiper-container.reg-slider-main
 							.swiper-wrapper
-								.swiper-slide(style="background-image: url(static/images/content/reg/reg-1.png);")
+								video.swiper-slide(poster="static/images/content/reg/reg-1.png", src="static/video/video-1.mp4", controls)
 								.swiper-slide(style="background-image: url(static/images/content/reg/reg-2.png);")
 								.swiper-slide(style="background-image: url(static/images/content/reg/reg-3.png);")
 								.swiper-slide(style="background-image: url(static/images/content/reg/reg-4.png);")
-								.swiper-slide(style="background-image: url(static/images/content/reg/reg-5.png);")
 								.swiper-slide(style="background-image: url(static/images/content/reg/reg-5.png);")
 						// .reg-slider-main
 						.swiper-container.reg-slider-thumbs
@@ -74,39 +74,38 @@ block content
 								.swiper-slide(style="background-image: url(static/images/content/reg/reg-3.png);")
 								.swiper-slide(style="background-image: url(static/images/content/reg/reg-4.png);")
 								.swiper-slide(style="background-image: url(static/images/content/reg/reg-5.png);")
-								.swiper-slide(style="background-image: url(static/images/content/reg/reg-5.png);")
 						// .reg-slider-thumbs
 					// .reg-slider-wrapper
 				// .reg-slider
 			// .reg-info
 			form.reg-form
-				.reg-title.reg-form__title Локация съемки - на циклораме и фонах
+				
 				.reg-form-blocks
 
 					.form-block
 						.reg-subtitle.form-block__title Название бренда <span>*</span>
-						input(type="text", name="", placeholder="Ответ").input.form-block__input
+						input(type="text", placeholder="Ответ").input.form-block__input
 					// .form-block
 
 					.form-block
 						.reg-subtitle.form-block__title Контактное лицо <span>*</span>
-						input(type="text", name="", placeholder="Ответ").input.form-block__input
+						input(type="text", placeholder="Ответ").input.form-block__input
 					// .form-block
 
 					.form-block
 						.reg-subtitle.form-block__title Номер телефона <span>*</span>
 							.form-block__descr Просьба, указывать номер телефона, прикрепленный к мессенджерам
-						input(type="tel", name="", placeholder="Ответ").input.form-block__input
+						input(type="tel", placeholder="Ответ").input.form-block__input
 					// .form-block
 
 					.form-block
 						.reg-subtitle.form-block__title E-mail <span>*</span>
-						input(type="email", name="", placeholder="Ответ").input.form-block__input
+						input(type="email", placeholder="Ответ").input.form-block__input
 					// .form-block
 
 					.form-block
 						.reg-subtitle.form-block__title Количество артикулов на съемку <span>*</span>
-						input(type="number", name="", placeholder="Ответ").input.form-block__input
+						input(type="number", placeholder="Ответ").input.form-block__input
 					// .form-block
 
 					.form-block
@@ -128,43 +127,44 @@ block content
 							.reg-format-checkbox
 								input(type="checkbox", name="format-check1")#format-check1.checkbox
 								label(for="format-check1") Проходка для Wildberries (<span>500</span> ₽/видео)
-							.reg-format__video(style="background-image: url(static/images/content/reg/video-1.png);")
+							video.reg-format__video(poster="static/images/content/reg/video-1.png", src="static/video/video-1.mp4", controls)
+
 							.reg-format-number
 								.reg-format-number__text Количество
-								input(type="text", name="", placeholder="Ответ").input.reg-format-number__input
+								input(type="text", placeholder="Ответ").input.reg-format-number__input
 						// .reg-format-block
 						
 						.reg-format-block
 							.reg-format-checkbox
 								input(type="checkbox", name="format-check2")#format-check2.checkbox
 								label(for="format-check2") Динамичная проходка (<span>700</span> ₽/видео)
-							.reg-format__video(style="background-image: url(static/images/content/reg/video-2.png);")
+							video.reg-format__video(poster="static/images/content/reg/video-2.png", src="static/video/video-1.mp4", controls)
 							.reg-format-number
 								.reg-format-number__text Количество
-								input(type="text", name="", placeholder="Ответ").input.reg-format-number__input
+								input(type="text", placeholder="Ответ").input.reg-format-number__input
 						// .reg-format-block
 
 						.reg-format-block
 							.reg-format-checkbox
 								input(type="checkbox", name="format-check3")#format-check3.checkbox
 								label(for="format-check3") Имиджевое для инстаграм (<span>1200</span> ₽/видео) 
-							.reg-format__video(style="background-image: url(static/images/content/reg/video-3.png);")
+							video.reg-format__video(poster="static/images/content/reg/video-3.png", src="static/video/video-1.mp4", controls)
 							.reg-format-number
 								.reg-format-number__text Количество
-								input(type="text", name="", placeholder="Ответ").input.reg-format-number__input
+								input(type="text", placeholder="Ответ").input.reg-format-number__input
 						// .reg-format-block							
 					// .reg-format-wrapper
 				// .reg-format
 
 				.reg-smallblock
 					.reg-smallblock-title.reg-subtitle Ссылка на ваш бренд
-					input(type="text", name="", placeholder="Ответ").input.reg-smallblock__input
+					input(type="text", placeholder="Ответ").input.reg-smallblock__input
 				// .reg-smallblock
 
 				.reg-smallblock
 					.reg-smallblock-title.reg-subtitle Пожелания к съемке
 						.reg-smallblock__descr В данной графе вы можете выразить пожелания к цвету фона, к стилистике, позированию модели.
-					input(type="text", name="", placeholder="Ответ").input.reg-smallblock__input
+					input(type="text", placeholder="Ответ").input.reg-smallblock__input
 				// .reg-smallblock
 
 				.reg-sum

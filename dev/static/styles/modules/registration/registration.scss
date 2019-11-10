@@ -13,12 +13,16 @@
   }
   &__descr {
     margin: 0 auto;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     max-width: 673px;
     text-align: center;
   }
+  &-top__title {
+    margin-bottom: 32px;
+    text-align: center;
+  }
   &-info { 
-    margin-bottom: 12px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-between;
   }
@@ -65,6 +69,7 @@
     &__prev { margin-right: 27px; }
     &-wrapper {
       display: flex;
+      align-items: center;
     }
     &-main {
       width: 246px;
@@ -72,6 +77,8 @@
       .swiper-slide {
         background-repeat: no-repeat;
         background-size: cover;
+        height: 100%;
+        object-fit: fill;
       }
     }
     &-thumbs {
@@ -87,10 +94,6 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    &__title { 
-      margin-bottom: 63px;
-      max-width: 245px; 
-    }
     &-blocks {
       display: flex;
       flex-wrap: wrap;
@@ -141,8 +144,10 @@
     &__video {
       margin-bottom: 36px;
       height: 294px;
+      width: 100%;
       background-position: center;
       background-size: cover;
+      outline: none;
     }
     &-number {
       display: flex;

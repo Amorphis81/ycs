@@ -80,12 +80,10 @@ $(document).ready(function () {
     
     //Thumbs
     var galleryThumbs = new Swiper('.single-thumbs-container', {
-        spaceBetween: 10,
-        slidesPerView: 3,
-        spaceBetween: 20,
         loop: true,
-        loopedSlides: 5, //looped slides should be the same
-        // freeMode: true,
+        slidesPerView: 3,
+        // loopedSlides: 5, //looped slides should be the same
+        freeMode: true,
         watchSlidesVisibility: true,
         navigation: {
             nextEl: '.single-thumbs__next',
@@ -93,18 +91,19 @@ $(document).ready(function () {
         },
         breakpoints: {
             320: {
-                // slidesPerColumn: 2,
+                slidesPerColumn: 2,
                 slidesPerView: 3,
                 spaceBetween: 8,
             },
             768: {
-                // slidesPerColumn: 1,
                 slidesPerView: 2,
-                spaceBetween: 5
+                spaceBetween: 5,
+                slidesPerColumn: 1,
             },
             1100: {
               slidesPerView: 3,
-              spaceBetween: 10
+              spaceBetween: 10,
+              slidesPerColumn: 1,
             },
         }
     });
@@ -166,8 +165,6 @@ $(document).ready(function () {
 
     // Reg Slider
     var regSliderThumbs = new Swiper('.reg-slider-thumbs', {
-        // slidesPerView: 2,
-        // slidesPerColumn: 2,
         loop: true,
         freeMode: true,
         loopedSlides: 5, //looped slides should be the same
@@ -179,7 +176,7 @@ $(document).ready(function () {
         },
         breakpoints: {
             560: { slidesPerView: 2, slidesPerColumn: 2, },
-            320: { slidesPerView: 1, slidesPerColumn: 2,y },
+            320: { slidesPerView: 1, slidesPerColumn: 2, },
         },
     });
 

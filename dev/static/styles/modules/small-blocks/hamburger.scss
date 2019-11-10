@@ -44,7 +44,7 @@
       padding: 45px 56px;
       height: calc(100% - 100px);
       background-color: $white;
-      menu { margin-bottom: 40px; }
+      ul { margin-bottom: 40px; }
     }
     &__item {
       &:not(:last-child) { margin-bottom: 32px; }

@@ -1,0 +1,22 @@
+extends template/inside
+
+block variables
+	- var title = 'Страница блога'
+	- var pageClass = 'single-blog-page'
+
+block content
+	section.s-breadcrumbs
+		.container
+			+breadcrumb
+	section.s-blog
+		.container.container-small
+			h2.h2.blog__title Готовы поработать с нами?
+			.single-block__date 13.10.2013
+			.single-block__img(style="background-image: url(static/images/content/blog/blog-1.png);")
+			.single-block__text
+				p Фотопродакшн-студия YOUR CHOICE PRODUCTION STUDIO приветствует Вас у себя в гостях! Сегодня мы поговорим о том, кто мы такие и почему...
+				p Фотопродакшн-студия YOUR CHOICE PRODUCTION STUDIO приветствует Вас у себя в гостях! Сегодня мы поговорим о том, кто мы такие и почему...
+				p Фотопродакшн-студия YOUR CHOICE PRODUCTION STUDIO приветствует Вас у себя в гостях! Сегодня мы поговорим о том, кто мы такие и почему...			
+			// .single-block__text
+
+			
