@@ -68,7 +68,7 @@
   .single-photo { margin: 0 auto; }
 
   .single-thumbs { 
-    height: 668px;
+    // height: 668px;
     max-width: 100%;
   }
 
@@ -144,6 +144,11 @@
   .swiper-container.reg-slider-thumbs {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .s-contacts {
+    padding-left: 17px;
+    padding-right: 17px;
   }
 }
 
@@ -234,6 +239,11 @@
   }
 
   .reg-format__video { height: 250px; }
+
+  .s-shooting-catalog, .s-team-about {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -328,7 +338,7 @@
 
   .shooting-parallax { height: 193px; }
 
-  .s-shooting-catalog { padding: 40px 0 50px; }
+  .s-shooting-catalog { padding: 40px 10px 50px; }
   
   .s-shooting-catalog label {
     margin-right: 5px;
@@ -398,7 +408,11 @@
     padding: 56px 25px 80px;
   }
 
-  .shooting-popup-overlay .popup__title { margin-bottom: 25px; }
+  .shooting-popup-overlay .popup__title { margin-bottom: 14px; }
+
+  .shooting-popup-overlay .popup-form__input { margin-bottom: 17px; }
+
+  .single-params { padding-left: 0;}
 }
 
 @media screen and (max-width: 480px){

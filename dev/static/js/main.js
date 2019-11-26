@@ -6,14 +6,14 @@ $(document).ready(function () {
     });
 
     $('.header-menu__item').on('click', function(e){
-        e.preventDefault();
-        var items = $('.header-menu__item');
-        for (var i = 0; i < items.length; i++){
-            if ( items[i] != $(this)[0] ) {
-                items[i].classList.remove('active');
+        if($(this).find('.dropdown').length != 0){
+            e.preventDefault();
+            var items = $('.header-menu__item');
+            for (var i = 0; i < items.length; i++){
+                if ( items[i] != $(this)[0] ) { items[i].classList.remove('active'); }
             }
+            $(this).toggleClass('active');
         }
-        $(this).toggleClass('active');
     })
 
     $('a[data-rel^=lightcase]').lightcase({
@@ -84,26 +84,26 @@ $(document).ready(function () {
         slidesPerView: 3,
         // loopedSlides: 5, //looped slides should be the same
         freeMode: true,
-        watchSlidesVisibility: true,
+        // watchSlidesVisibility: true,
         navigation: {
             nextEl: '.single-thumbs__next',
             prevEl: '.single-thumbs__prev',
         },
         breakpoints: {
             320: {
-                slidesPerColumn: 2,
+                // slidesPerColumn: 2,
                 slidesPerView: 3,
                 spaceBetween: 8,
             },
             768: {
                 slidesPerView: 2,
                 spaceBetween: 5,
-                slidesPerColumn: 1,
+                // slidesPerColumn: 1,
             },
             1100: {
               slidesPerView: 3,
               spaceBetween: 10,
-              slidesPerColumn: 1,
+            //   slidesPerColumn: 1,
             },
         }
     });
@@ -130,9 +130,11 @@ $(document).ready(function () {
     })
 
     // Shooting parallax
-    new ScrollMagic.Scene({triggerElement: "#parallax1"})
-    .setTween("#shooting-parallax > div", {y: "200%", ease: Linear.easeNone})
-    .addTo(controller);
+    if (document.getElementById('shooting-parallax')) {
+        new ScrollMagic.Scene()
+            .setTween("#shooting-parallax > div", {y: "200%", ease: Linear.easeNone})
+            .addTo(controller);
+    }
 
     //Shooting popup
     $('.catalog-block-order__button').on('click', function(e){
