@@ -22,6 +22,12 @@ $(document).ready(function () {
         swipe: true
     });
 
+    //Phone popup
+    $('.header-social-phone').on('click', function(e){
+        e.preventDefault();
+        $('.popup-phone').toggleClass('display-block');
+    })
+
     // Parallax
     // init controller
 	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});

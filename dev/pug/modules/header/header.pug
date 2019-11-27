@@ -4,8 +4,10 @@ header.header
       img(src="static/images/general/logo.png", alt="logo")
     include ../menu/header-menu
     .header-social
-      a(href="tel:+79214838011").header-social__icon
+      a(href="#").header-social__icon.header-social-phone
         +icon('phone', 'header-social__icon-phone')
+      .popup-phone
+        a(href="tel:+79254838011") +7 (925) 483 80 11
       a(href="#").header-social__icon
         +icon('instagram', 'header-social__icon-instagram')
       a(href="#").header-social__icon
