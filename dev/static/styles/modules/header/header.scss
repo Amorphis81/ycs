@@ -61,6 +61,7 @@
   &-social {
     display: flex;
     align-items: center;
+    position: relative;
     & > * {
       &:not(:last-child) { margin-right: 24px; }
     }
@@ -73,5 +74,19 @@
         height: 100%;
       }
     }
+  }
+}
+
+.popup-phone {
+  display: none;
+  padding: 24px;
+  position: absolute;
+  left: 0;
+  bottom: -92px;
+  background-color: $accent;
+  a {
+    font-size: 18px;
+    font-weight: 500;
+    color: $white;
   }
 }

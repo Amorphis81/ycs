@@ -7,12 +7,14 @@ $(document).ready(function () {
 
     $('.header-menu__item').on('click', function(e){
         if($(this).find('.dropdown').length != 0){
-            e.preventDefault();
             var items = $('.header-menu__item');
-            for (var i = 0; i < items.length; i++){
-                if ( items[i] != $(this)[0] ) { items[i].classList.remove('active'); }
+            if (e.target.className != 'dropdown' && e.target.className != 'dropdown__item') {
+                e.preventDefault();
+                for (var i = 0; i < items.length; i++){
+                    if ( items[i] != $(this)[0]) { items[i].classList.remove('active'); }
+                }
+                $(this).toggleClass('active');
             }
-            $(this).toggleClass('active');
         }
     })
 
@@ -21,6 +23,12 @@ $(document).ready(function () {
         "maxHeight": 621,
         swipe: true
     });
+
+    //Phone popup
+    $('.header-social-phone').on('click', function(e){
+        e.preventDefault();
+        $('.popup-phone').toggleClass('display-block');
+    })
 
     // Parallax
     // init controller

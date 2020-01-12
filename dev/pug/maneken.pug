@@ -1,0 +1,81 @@
+extends template/inside
+
+block variables
+	- var title = 'Предметная съемка'
+	- var pageClass = 'object-shooting-page'
+
+block content
+	section.s-breadcrumbs
+		.container
+			+breadcrumb-shooting('Предметная съемка')
+	.shooting-popup-overlay
+		.popup__close
+			+icon('close')
+		.popup-window
+			.popup__title Оставить заявку
+			form.popup-form
+				input(type="text", placeholder="Имя").input.popup-form__input
+				input(type="tel", placeholder="Номер").input.popup-form__input
+				input(type="email", placeholder="E-mail").input.popup-form__input
+				input(type="text", placeholder="Сообщение").input.popup-form__input
+				button(type="submit").button.popup__button Отправить
+			// .popup-form
+		// .popup-window
+	// .shooting-popup-overlay
+	section.s-shooting-main
+		h2.h2.shooting__title Предметная съемка
+		#shooting-parallax.shooting-parallax
+			.shooting-parallax__content(style="background-image: url(static/images/content/maneken/parallax-img.png);")
+	//.s-shooting-main
+	section.s-shooting-catalog
+		.container
+			h3.h3.shooting__subtitle Стоимость услуг
+			input(type="radio", name="tabs", checked)#tab1
+			label(for="tab1", title="Бижутерии и сложные бликующие предметы") Съемка на манекене
+			
+			input(type="radio", name="tabs")#tab2
+			label(for="tab2", title="Сумки, обувь, головные уборы") Съемка на вешалке
+
+			.catalog
+				.catalog-block
+					.catalog-block__title Съемка на манекене
+					#content-tab1.content-tab
+						.catalog-block__note от 1 артикула
+						.catalog-block-list
+							.catalog-block-list__title В стоиомсть входит:
+							ul
+								li распаковка
+								li отпаривание
+								li фотосъемка 2 ракурса
+								li ретушь
+						// .catalog-block-list
+						.catalog-block-order
+							.catalog-block-order__price <span>400</span> ₽/арт
+							button.button.catalog-block-order__button Заказать
+						// .catalog-block-order
+					// .content-tab
+				// .catalog-block
+				
+				.catalog-block
+					.catalog-block__title Съемка на вешалке
+					#content-tab2.content-tab
+						.catalog-block__note от 1 артикула
+						.catalog-block-list
+							.catalog-block-list__title В стоиомсть входит:
+							ul
+								li распаковка
+								li отпаривание
+								li фотосъемка 1 ракурс
+								li ретушь
+						// .catalog-block-list
+						.catalog-block-order
+							.catalog-block-order__price <span>350</span> ₽/фото
+							button.button.catalog-block-order__button Заказать
+						// .catalog-block-order
+					// .content-tab
+				// .catalog-block
+
+			// .catalog
+	//.s-shooting-catalog
+
+	include modules/blocks/example 

@@ -24,6 +24,8 @@
         font-size: 10px;
       }
       &__text {
+        display: block;
+        color: $accent;
         margin-bottom: 16px;
         max-width: 323px;
         font-size: 14px;
