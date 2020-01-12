@@ -1,0 +1,142 @@
+extends template/inside
+
+block variables
+	- var title = 'Личный кабинет'
+	- var pageClass = 'personal-page'
+
+block content
+	.container.cabinet-container
+		aside.cabinet-sidebar
+			ul.cabinet-sidebar-menu
+				li.cabinet-sidebar-menu__item.check Личные данные
+				li.cabinet-sidebar-menu__item Мои заказы
+			.cabinet-sidebar-links
+				a(href="#", style="background-image: url(static/images/content/personal-area/link-bg-1.png);").link
+					.link__descr Ваши фото
+					.link__title Невидимый манекен/предметка
+				a(href="#", style="background-image: url(static/images/content/personal-area/link-bg-2.png);").link
+					.link__descr Ваши фото
+					.link__title Сборная съемка
+				a(href="#", style="background-image: url(static/images/content/personal-area/link-bg-3.png);").link
+					.link__descr Ваши фото
+					.link__title Форма на ретушь
+			// .cabinet-sidebar-links
+		// aside.cabinet-sidebar
+
+		section.cabinet-tab-content.cabinet-tab-content_personal
+			h3.h3.cabinet-tab__title Личные данные
+			.cabinet-tab__descr Эти данные нужны чтобы автоматически заполнять будущие заявки, не беспокойтесь, спама не будет
+			form.cabinet-form
+				.cabinet-form-block
+					label.cabinet-form__label Контактное лицо
+					input(type="text", placeholder="Имя").input.cabinet-form__input
+				.cabinet-form-block
+					label.cabinet-form__label Номер телефона
+					input(type="tel", placeholder="Телефон").input.cabinet-form__input
+				.cabinet-form-block
+					label.cabinet-form__label E-mail
+					input(type="email", placeholder="Почта").input.cabinet-form__input
+				.cabinet-form-block
+					label.cabinet-form__label Название бренда
+					input(type="text", placeholder="Бренд").input.cabinet-form__input
+				.cabinet-form-block
+					label.cabinet-form__label Ссылка на ваш бренд
+					input(type="url", placeholder="Ссылка на сайт").input.cabinet-form__input
+				.cabinet-form-block
+					label.cabinet-form__label Контактные данные для отправки изделий
+					input(type="text", placeholder="ФИО, контактный телефон, адрес офиса или адрес ПВЗ СДЕК").input.cabinet-form__input
+				button(type="submit").button.cabinet-form__button Сохранить
+				.cabinet-form__message Изменения сохранены
+			// .cabinet-form
+
+		// .cabinet-tab-content
+
+		section.cabinet-tab-content.cabinet-tab-content_orders.active
+			h3.h3.cabinet-tab__title Мои заказы
+			form.cabinet-filter
+				a(href="#").cabinet-filter-title 
+					.cabinet-filter-title__name Фильтр
+					.cabinet-filter-title-arrow
+						+icon('arrow-down', 'cabinet-filter-title-arrow__icon cabinet-filter-title-arrow__icon_down display-block')
+						+icon('arrow-up', 'cabinet-filter-title-arrow__icon cabinet-filter-title-arrow__icon_up')
+				.cabinet-filter-wrapper
+					.cabinet-filter-block
+						label.cabinet-filter__label Статус заказа
+						.select
+							select.input.cabinet-filter__select
+								+option('Все')
+								+option('Депозит оплачен')
+								+option('Ожидается оплата')
+								+option('Заказ оплачен')
+					// .cabinet-filter-block
+
+					.cabinet-filter-block
+						label.cabinet-filter__label Статус фото
+						.select
+							select.input.cabinet-filter__select
+								+option('Все')
+								+option('В обработке')
+								+option('Ретушь завершена')
+					// .cabinet-filter-block
+
+					.cabinet-filter-block
+						label.cabinet-filter__label Дата съемки
+						<span> c</span>
+						input(type="date", name="").input.cabinet-filter__date
+						<span> по </span>
+						input(type="date", name="").input.cabinet-filter__date
+					// .cabinet-filter-block
+
+			// .cabinet-filter
+
+			.cabinet-table
+				.cabinet-table-row.cabinet-table-row-header
+					.cabinet-table-cell.cabinet-table-cell__date
+					.cabinet-table-cell.border-right.cabinet-table-cell__quantity Кол-во арт.
+					.cabinet-table-cell.border-right.cabinet-table-cell__video Видео
+					.cabinet-table-cell.border-right.cabinet-table-cell-price Стоимость
+					.cabinet-table-cell.border-right.cabinet-table-cell__order Статус заказа
+					.cabinet-table-cell.cabinet-table-cell__photo Статус фото
+				// .cabinet-table-row.cabinet-table-row-header
+				
+				.cabinet-table-row
+					.cabinet-table-cell(style="background-image: url(static/images/content/personal-area/tab-bg-1.png);").cabinet-table-cell__date
+						a(href="#") 25.12.2019
+					.cabinet-table-cell.cabinet-table-cell__quantity.border-right 10
+					.cabinet-table-cell.border-right.cabinet-table-cell__video 8
+					.cabinet-table-cell.border-right.cabinet-table-cell-price 
+						.cabinet-table-cell-price__total 18000 <span>₽</span>
+					.cabinet-table-cell.cabinet-table-cell__order.border-right Депозит оплачен
+					.cabinet-table-cell.cabinet-table-cell__photo <span class="processing">В обработке</span>
+				// .cabinet-table-row
+
+				.cabinet-table-row
+					.cabinet-table-cell(style="background-image: url(static/images/content/personal-area/tab-bg-2.png);").cabinet-table-cell__date
+						a(href="#") 25.12.2019
+					.cabinet-table-cell.cabinet-table-cell__quantity.border-right 25
+					.cabinet-table-cell.border-right.cabinet-table-cell__video 31
+					.cabinet-table-cell.cabinet-table-cell-price.border-right
+						.cabinet-table-cell-price__total 9200 <span>₽</span>
+						.cabinet-table-cell-price__paid <span>200 ₽</span> оплачено
+					.cabinet-table-cell.cabinet-table-cell__order.border-right Ожидается оплата
+					.cabinet-table-cell.cabinet-table-cell__photo <span class="complete">Ретушь завершена</span>
+				// .cabinet-table-row
+
+				.cabinet-table-row
+					.cabinet-table-cell(style="background-image: url(static/images/content/personal-area/tab-bg-3.png);").cabinet-table-cell__date 
+						a(href="#") 25.12.2019
+					.cabinet-table-cell.border-right.cabinet-table-cell__quantity 50
+					.cabinet-table-cell.border-right.cabinet-table-cell__video 15
+					.cabinet-table-cell.cabinet-table-cell-price.border-right
+						.cabinet-table-cell-price__total 18000 <span>₽</span>
+						.cabinet-table-cell-price__paid <span>200 ₽</span> оплачено
+					.cabinet-table-cell.cabinet-table-cell__order.border-right Заказ оплачен
+					.cabinet-table-cell.cabinet-table-cell__photo <span class="complete">Ретушь завершена</span>
+				// .cabinet-table-row
+
+
+			// .cabinet-table
+
+		// .cabinet-tab-content
+
+	// .container.container-small.cabinet-container

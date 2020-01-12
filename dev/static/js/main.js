@@ -196,4 +196,19 @@ $(document).ready(function () {
             swiper: regSliderThumbs,
           },
     });
+
+    // Personal Area
+    // Vertikal tabs
+    $('.cabinet-sidebar-menu').delegate('li:not(.check)', 'click', function(){
+        $(this).addClass('check').siblings().removeClass('check')
+        .parents('.cabinet-container').find('.cabinet-tab-content')
+        .hide().eq( $(this).index() ).fadeIn(170);
+    });
+
+    // Filter
+    $('.cabinet-filter-title').on('click', function(e){
+        e.preventDefault();
+        $('.cabinet-filter-title-arrow__icon_down, .cabinet-filter-title-arrow__icon_up').toggleClass('display-block')
+        $('.cabinet-filter-wrapper').toggleClass('display-flex');
+    })
 });
