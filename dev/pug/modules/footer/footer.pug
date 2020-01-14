@@ -1,4 +1,46 @@
 footer.footer
+  .modal-signup-overlay
+    .modal-signup__close
+      +icon('close', '.modal-signup__close-icon')
+    .modal-signup-window.modal-signup-window_login.display-flex
+      .modal-signup__title Войти
+      form.modal-signup-form
+        input(type="email", name="", placeholder="E-mail").input.modal-signup-form__input
+        input(type="password", name="", placeholder="Пароль").input.modal-signup-form__input
+        button(type="submit").button.modal-signup-form__button Войти
+        a(href="#")#modal-reg.modal-signup-form__link Регистрация
+      .alert Логин и пароль были введены не правильно
+    // .modal-signup-window.modal-signup-window_login
+
+    .modal-signup-window.modal-signup-window_reg
+      .modal-signup__title Регистрация
+      form.modal-signup-form
+        .modal-signup-form-row
+          input(type="text", name="", placeholder="Имя").input.modal-signup-form__input
+        .modal-signup-form-row
+          input(type="email", name="", placeholder="E-mail").input.modal-signup-form__input
+          .alert-reg Такой E-mail уже существует
+        .modal-signup-form-row
+          input(type="password", name="", placeholder="Пароль").input.modal-signup-form__input
+        .modal-signup-form-check
+          input(type="checkbox", name="")#reg-check
+          label(for="reg-check") Настоящим подтверждаю, что я ознакомлени согласен с 
+            a(href="#").modal-signup-form-check__link условиями политики конфиденциальности
+        button(type="submit").button.modal-signup-form__button Регистрация
+        a(href="#")#modal-login.modal-signup-form__link Войти
+    // .modal-signup-window.modal-signup-window_reg
+
+    .modal-signup-window.modal-signup-window_success
+      .modal-signup__title Вы зарегистрировались!
+      .modal-signup__text Поздравляем! Теперь вы можете заполнить профиль в личном кабинете или перейти на главную страницу.
+      .modal-signup-buttons
+        a(href="#").button Перейти в личный кабинет
+        a(href="#").button Перейти на главную
+  // .modal-login-overlay
+
+
+
+
   .footer-top
     .container.container-small
       .footer-block

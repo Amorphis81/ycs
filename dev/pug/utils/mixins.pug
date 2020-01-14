@@ -53,3 +53,36 @@ mixin blog-item(img)
 			.blog-item__text Фотопродакшн-студия YOUR CHOICE PRODUCTION STUDIO приветствует Вас у себя в гостях! Сегодня мы поговорим о том, кто мы такие и почему...
 			.blog-item__date 13.10.2019
 	// .blog-item
+
+mixin cabinet-table-row(img, quantity, videoNum, total, paid, orderStatus, photoStatus)
+	.cabinet-table-row
+		.cabinet-table-cell(style="background-image: url(static/images/content/personal-area/"+ img +");").cabinet-table-cell__date
+			a(href="#") 25.12.2019
+		.cabinet-table-cell.cabinet-table-cell__quantity.border-right= quantity
+		.cabinet-table-cell.border-right.cabinet-table-cell__video
+			.video-details
+				a(href="#").video-details__button ?
+				.video-details-content
+					ul
+						li.video-details-content__item <span>3</span> для Wildberries
+						li.video-details-content__item <span>1</span> динамичная проходка
+						li.video-details-content__item <span>4</span> для Instagram
+			=videoNum
+		.cabinet-table-cell.cabinet-table-cell-price.border-right
+			.cabinet-table-cell-price-wrapper
+				.cabinet-table-cell-price__total= total
+					<span>₽</span>
+				if (paid)
+					.cabinet-table-cell-price__paid= paid
+						<span> ₽</span> оплачено
+		if orderStatus == 0
+			.cabinet-table-cell.cabinet-table-cell__order.border-right Депозит оплачен
+		else if orderStatus == 1
+			.cabinet-table-cell.cabinet-table-cell__order.border-right Ожидается оплата
+		else if orderStatus == 2
+			.cabinet-table-cell.cabinet-table-cell__order.border-right Заказ оплачен
+		if photoStatus == 0
+			.cabinet-table-cell.cabinet-table-cell__photo <span class="processing">В обработке</span>
+		else if photoStatus == 1
+			.cabinet-table-cell.cabinet-table-cell__photo <span class="complete">Ретушь завершена</span>
+	// .cabinet-table-row

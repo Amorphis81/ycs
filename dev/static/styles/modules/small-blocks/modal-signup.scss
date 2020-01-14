@@ -1,0 +1,120 @@
+// Modal signup
+.modal-signup {
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #313131;
+    cursor: pointer;
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: $grey;
+    }
+  }
+  &-overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000000, .7);
+    z-index: 1500;
+  }
+  &-window {
+    position: relative;
+    padding: 48px 0 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: $white;
+    &_reg { display: none; }
+    &_login { display: none; }
+    &_success {
+      display: none;
+      max-width: 784px;
+    }
+    .alert {
+      position: absolute;
+      bottom: 24px;
+      color: #EB5757;
+      &-reg {
+        position: absolute;
+        bottom: 0;
+        font-size: 10px;
+        color: #EB5757;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 240px;
+    &__input { 
+      margin-bottom: 14px;
+      width: 100%;
+    }
+    &__button { 
+      margin-top: 10px;
+      margin-bottom: 32px;
+      width: 100%;
+      max-width: 200px;
+    }
+    &__link {
+      color: $accent;
+      font-weight: 500;
+      text-align: center;
+    }
+    &-check {
+      display: flex;
+      font-size: 12px;
+      input[type="checkbox"] { margin-right: 8px; }
+      &__link {
+        color: $accent;
+        text-decoration: underline;
+      }
+    }
+    &-row {
+      position: relative;
+      width: 100%;
+    }
+  }
+  &__text {
+    margin-bottom: 32px;
+    max-width: 500px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+  }
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    .button {
+      padding: 10px;
+      width: 100%;
+      max-width: 230px;
+    }
+  }
+}

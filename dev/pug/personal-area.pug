@@ -7,6 +7,9 @@ block variables
 block content
 	.container.cabinet-container
 		aside.cabinet-sidebar
+			a(href="#").cabinet-sidebar__menu
+				+icon('arrow-left')
+				span Меню
 			ul.cabinet-sidebar-menu
 				li.cabinet-sidebar-menu__item.check Личные данные
 				li.cabinet-sidebar-menu__item Мои заказы
@@ -23,7 +26,10 @@ block content
 			// .cabinet-sidebar-links
 		// aside.cabinet-sidebar
 
-		section.cabinet-tab-content.cabinet-tab-content_personal
+		section.cabinet-tab-content.active
+			a(href="#").cabinet-tab__menu
+				+icon('arrow-left')
+				span Личный кабинет
 			h3.h3.cabinet-tab__title Личные данные
 			.cabinet-tab__descr Эти данные нужны чтобы автоматически заполнять будущие заявки, не беспокойтесь, спама не будет
 			form.cabinet-form
@@ -51,7 +57,7 @@ block content
 
 		// .cabinet-tab-content
 
-		section.cabinet-tab-content.cabinet-tab-content_orders.active
+		section.cabinet-tab-content
 			h3.h3.cabinet-tab__title Мои заказы
 			form.cabinet-filter
 				a(href="#").cabinet-filter-title 
@@ -99,40 +105,12 @@ block content
 					.cabinet-table-cell.cabinet-table-cell__photo Статус фото
 				// .cabinet-table-row.cabinet-table-row-header
 				
-				.cabinet-table-row
-					.cabinet-table-cell(style="background-image: url(static/images/content/personal-area/tab-bg-1.png);").cabinet-table-cell__date
-						a(href="#") 25.12.2019
-					.cabinet-table-cell.cabinet-table-cell__quantity.border-right 10
-					.cabinet-table-cell.border-right.cabinet-table-cell__video 8
-					.cabinet-table-cell.border-right.cabinet-table-cell-price 
-						.cabinet-table-cell-price__total 18000 <span>₽</span>
-					.cabinet-table-cell.cabinet-table-cell__order.border-right Депозит оплачен
-					.cabinet-table-cell.cabinet-table-cell__photo <span class="processing">В обработке</span>
-				// .cabinet-table-row
-
-				.cabinet-table-row
-					.cabinet-table-cell(style="background-image: url(static/images/content/personal-area/tab-bg-2.png);").cabinet-table-cell__date
-						a(href="#") 25.12.2019
-					.cabinet-table-cell.cabinet-table-cell__quantity.border-right 25
-					.cabinet-table-cell.border-right.cabinet-table-cell__video 31
-					.cabinet-table-cell.cabinet-table-cell-price.border-right
-						.cabinet-table-cell-price__total 9200 <span>₽</span>
-						.cabinet-table-cell-price__paid <span>200 ₽</span> оплачено
-					.cabinet-table-cell.cabinet-table-cell__order.border-right Ожидается оплата
-					.cabinet-table-cell.cabinet-table-cell__photo <span class="complete">Ретушь завершена</span>
-				// .cabinet-table-row
-
-				.cabinet-table-row
-					.cabinet-table-cell(style="background-image: url(static/images/content/personal-area/tab-bg-3.png);").cabinet-table-cell__date 
-						a(href="#") 25.12.2019
-					.cabinet-table-cell.border-right.cabinet-table-cell__quantity 50
-					.cabinet-table-cell.border-right.cabinet-table-cell__video 15
-					.cabinet-table-cell.cabinet-table-cell-price.border-right
-						.cabinet-table-cell-price__total 18000 <span>₽</span>
-						.cabinet-table-cell-price__paid <span>200 ₽</span> оплачено
-					.cabinet-table-cell.cabinet-table-cell__order.border-right Заказ оплачен
-					.cabinet-table-cell.cabinet-table-cell__photo <span class="complete">Ретушь завершена</span>
-				// .cabinet-table-row
+				+cabinet-table-row('tab-bg-1.png', 10, 8, 18000, 0, 0, 0)
+				+cabinet-table-row('tab-bg-2.png', 25, 31, 9200, 200, 1, 1)
+				+cabinet-table-row('tab-bg-3.png', 50, 15, 18000, 0, 2, 1)
+				+cabinet-table-row('tab-bg-1.png', 10, 3, 18000, 0, 0, 0)
+				+cabinet-table-row('tab-bg-2.png', 25, 31, 9200, 0, 1, 1)
+				+cabinet-table-row('tab-bg-3.png', 50, 15, 18000, 0, 2, 1)
 
 
 			// .cabinet-table
