@@ -41,6 +41,10 @@
     background-color: $white;
     &_reg { display: none; }
     &_login { display: none; }
+    &_forgot { 
+      display: none; 
+      max-width: 500px;
+    }
     &_success {
       display: none;
       max-width: 784px;
@@ -63,6 +67,11 @@
     font-size: 20px;
     text-align: center;
   }
+  &__descr {
+    margin-bottom: 15px;
+    text-align: center;
+    max-width: 300px;
+  }
   &-form {
     display: flex;
     flex-direction: column;
@@ -79,11 +88,14 @@
       margin-bottom: 32px;
       width: 100%;
       max-width: 200px;
+      &-forgot { margin-bottom: 0; }
     }
     &__link {
+      display: block;
       color: $accent;
       font-weight: 500;
       text-align: center;
+      &:first-of-type { margin-bottom: 10px; }
     }
     &-check {
       display: flex;

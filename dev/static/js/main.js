@@ -228,11 +228,17 @@ $(document).ready(function () {
         $('.modal-signup-window_login').removeClass('display-flex');
         $('.modal-signup-window_reg').addClass('display-flex');
     })
-
+    
     $('#modal-login').on('click', function(e){
         e.preventDefault();
         $('.modal-signup-window_reg').removeClass('display-flex');
         $('.modal-signup-window_login').addClass('display-flex');
+    })
+    
+    $('#modal-forgot').on('click', function(e){
+        e.preventDefault();
+        $('.modal-signup-window_login').removeClass('display-flex');
+        $('.modal-signup-window_forgot').addClass('display-flex');
     })
 
     // Personal area link menu
